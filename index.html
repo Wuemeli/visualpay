@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landify</title>
+    <meta property="og:title" content="Landify" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.55;
+        color: var(--dl-color-gray-900);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script:wght@400&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./css/home.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <div data-role="Header" class="home-header-container">
+          <div data-type="MobileMenu" class="home-mobile-menu">
+            <div class="home-top">
+              <div class="home-logo">
+                <img
+                  alt="image"
+                  src="public/playground_assets/logotype-dark.svg"
+                  class="home-image"
+                />
+              </div>
+              <div data-type="CloseMobileMenu" class="home-close-menu">
+                <svg viewBox="0 0 1024 1024" class="home-icon">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="home-mid">
+              <span class="home-text">About</span>
+              <span class="home-text01">Products</span>
+              <span class="home-text02">Pricing</span>
+              <span class="home-text03">Blog</span>
+              <span class="home-text04">Jobs</span>
+              <span class="home-text05">More</span>
+            </div>
+            <div class="home-bot">
+              <div class="home-container01">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link"
+                >
+                  <div class="home-container02">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon02"
+                    >
+                      <path
+                        d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://dribbble.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link1"
+                >
+                  <div class="home-container03">
+                    <svg
+                      viewBox="0 0 877.7142857142857 1024"
+                      class="home-icon04"
+                    >
+                      <path
+                        d="M585.143 857.143c-5.714-33.143-27.429-147.429-80-284.571-0.571 0-1.714 0.571-2.286 0.571 0 0-222.286 77.714-294.286 234.286-3.429-2.857-8.571-6.286-8.571-6.286 65.143 53.143 148 85.714 238.857 85.714 52 0 101.143-10.857 146.286-29.714zM479.429 510.286c-9.143-21.143-19.429-42.286-30.286-63.429-193.143 57.714-378.286 53.143-384.571 53.143-0.571 4-0.571 8-0.571 12 0 96 36.571 184 96 250.286v0c102.286-182.286 304.571-247.429 304.571-247.429 5.143-1.714 10.286-2.857 14.857-4.571zM418.286 389.143c-65.143-115.429-134.286-209.143-139.429-216-104.571 49.143-182.286 145.714-206.857 261.714 9.714 0 166.286 1.714 346.286-45.714zM809.143 571.429c-8-2.286-112.571-35.429-233.714-16.571 49.143 135.429 69.143 245.714 73.143 268 84-56.571 143.429-146.857 160.571-251.429zM349.143 148c-0.571 0-0.571 0-1.143 0.571 0 0 0.571-0.571 1.143-0.571zM686.286 230.857c-65.714-58.286-152.571-93.714-247.429-93.714-30.286 0-60 4-88.571 10.857 5.714 7.429 76.571 100.571 140.571 218.286 141.143-52.571 194.286-133.714 195.429-135.429zM813.714 508c-1.143-88.571-32.571-170.286-85.143-234.286-1.143 1.143-61.143 88-209.143 148.571 8.571 17.714 17.143 36 25.143 54.286 2.857 6.286 5.143 13.143 8 19.429 129.143-16.571 256.571 11.429 261.143 12zM877.714 512c0 242.286-196.571 438.857-438.857 438.857s-438.857-196.571-438.857-438.857 196.571-438.857 438.857-438.857 438.857 196.571 438.857 438.857z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link2"
+                >
+                  <div class="home-container04">
+                    <svg
+                      viewBox="0 0 950.8571428571428 1024"
+                      class="home-icon06"
+                    >
+                      <path
+                        d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  class="home-link3"
+                >
+                  <div class="home-container05">
+                    <svg viewBox="0 0 1024 1024" class="home-icon08">
+                      <path
+                        d="M406.286 644.571l276.571-142.857-276.571-144.571v287.429zM512 152c215.429 0 358.286 10.286 358.286 10.286 20 2.286 64 2.286 102.857 43.429 0 0 31.429 30.857 40.571 101.714 10.857 82.857 10.286 165.714 10.286 165.714v77.714s0.571 82.857-10.286 165.714c-9.143 70.286-40.571 101.714-40.571 101.714-38.857 40.571-82.857 40.571-102.857 42.857 0 0-142.857 10.857-358.286 10.857v0c-266.286-2.286-348-10.286-348-10.286-22.857-4-74.286-2.857-113.143-43.429 0 0-31.429-31.429-40.571-101.714-10.857-82.857-10.286-165.714-10.286-165.714v-77.714s-0.571-82.857 10.286-165.714c9.143-70.857 40.571-101.714 40.571-101.714 38.857-41.143 82.857-41.143 102.857-43.429 0 0 142.857-10.286 358.286-10.286v0z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-main">
+          <div class="home-blur-background"></div>
+          <div class="home-hero">
+            <div class="home-container06">
+              <h1 class="home-text06 headline1">
+                <span>The new Generation</span>
+                <br />
+                <span>of Online Payment.</span>
+              </h1>
+              <div class="primary-button-container">
+                <button class="primary-button-button mediumLabel button">
+                  <span>Get Started</span>
+                </button>
+              </div>
+            </div>
+            <img
+              alt="image"
+              src="public/playground_assets/iphonex-1200w.png"
+              class="home-image1"
+            />
+          </div>
+          <img
+            alt="image"
+            src="public/playground_assets/turquoise-circle.svg"
+            class="home-turquoise-cirble"
+          />
+          <img
+            alt="image"
+            src="public/playground_assets/purple-circle.svg"
+            class="home-purple-circle"
+          />
+          <img
+            alt="image"
+            src="public/playground_assets/left.svg"
+            class="home-left"
+          />
+          <img
+            alt="image"
+            src="public/playground_assets/right.svg"
+            class="home-right"
+          />
+        </div>
+        <div class="home-features">
+          <h2 class="home-text10">Fast and Secure</h2>
+          <div class="home-features1">
+            <div class="feature-card-container">
+              <img
+                alt="image"
+                src="public/playground_assets/01.svg"
+                class="feature-card-image"
+              />
+              <h5 class="feature-card-text headline5">
+                <span>Our Server have fast and secure connection to our Databases</span>
+              </h5>
+              <span class="feature-card-text1">
+                <span>
+                  This brings a new way of Online Payment Service thats secure.
+                </span>
+              </span>
+            </div>
+            <div class="feature-card-container">
+              <img
+                alt="image"
+                src="public/playground_assets/02.svg"
+                class="feature-card-image"
+              />
+              <h5 class="feature-card-text headline5">
+                <span>Flexibility</span>
+              </h5>
+              <span class="feature-card-text1">
+                <span>
+                  Deposit and Wihtdraw youre Money with over 5+ Payment Methods
+                </span>
+              </span>
+            </div>
+            <div class="feature-card-container">
+              <img
+                alt="image"
+                src="public/playground_assets/03.svg"
+                class="feature-card-image"
+              />
+              <h5 class="feature-card-text headline5">
+                <span>User friendly</span>
+              </h5>
+              <span class="feature-card-text1">
+                <span>
+                  With our User Friendly Design evertyhing looks responsive
+                </span>
+              </span>
+            </div>
+            <div class="feature-card-container">
+              <img
+                alt="image"
+                src="public/playground_assets/04.svg"
+                class="feature-card-image"
+              />
+              <h5 class="feature-card-text headline5">
+                <span>Multiple layouts</span>
+              </h5>
+              <span class="feature-card-text1">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  erat nibh tristique ipsum.
+                </span>
+              </span>
+            </div>
+            <div class="feature-card-container">
+              <img
+                alt="image"
+                src="public/playground_assets/05.svg"
+                class="feature-card-image"
+              />
+              <h5 class="feature-card-text headline5">
+                <span>Better compoents</span>
+              </h5>
+              <span class="feature-card-text1">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  erat nibh tristique ipsum.
+                </span>
+              </span>
+            </div>
+            <div class="feature-card-container">
+              <img
+                alt="image"
+                src="public/playground_assets/06.svg"
+                class="feature-card-image"
+              />
+              <h5 class="feature-card-text headline5">
+                <span>Well organized</span>
+              </h5>
+              <span class="feature-card-text1">
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  erat nibh tristique ipsum.
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="home-feature1">
+          <div class="home-container07">
+            <img
+              alt="image"
+              src="public/playground_assets/iphonex-1200w.png"
+              image_src="/playground_assets/iphonex-1200w.png"
+              class="home-image2"
+            />
+          </div>
+          <div class="home-container08">
+            <h3 class="home-text11">VisualPay</h3>
+            <span class="home-text12">
+              <span>VisualPay is the new Online Payment Solution.</span>
+              <br />
+              <span>
+                With Low Fees, User Friendly Design and fast Support&nbsp;we're
+                one of the Leading Payment Solutions
+              </span>
+              <br />
+            </span>
+            <div class="link-icon-button-container">
+              <button class="link-icon-button-button button">
+                <span class="mediumLabel"><span>Get Started</span></span>
+                <svg viewBox="0 0 1024 1024" class="link-icon-button-icon">
+                  <path
+                    d="M481.835 243.499l225.835 225.835h-494.336c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667h494.336l-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l298.667-298.667c3.925-3.925 7.083-8.619 9.259-13.824 4.309-10.453 4.309-22.229 0-32.683-2.091-5.035-5.163-9.728-9.259-13.824l-298.667-298.667c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="home-footer">
+          <footer class="home-container09">
+            <img
+              alt="image"
+              src="public/playground_assets/logo-1200w.png"
+              class="home-image3"
+            />
+            <div class="home-container10"></div>
+            <div class="home-divider"></div>
+            <div class="home-container11">
+              <span class="home-text17 body2">
+                © 2022 VisualPay. All rights reserved
+              </span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  </body>
+</html>
