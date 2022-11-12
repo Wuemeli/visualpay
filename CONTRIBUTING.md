@@ -1,4 +1,4 @@
-<!-- omit in toc -->
+https://github.com/Wuemeli/visualpay/blob/main/CONTRIBUTING.md<!-- omit in toc -->
 # Contributing to VisualPay
 
 First off, thanks for taking the time to contribute! ❤️
@@ -146,6 +146,3 @@ Updating, improving and correcting the documentation
 ## Join The Project Team
 <!-- TODO -->
 
-<!-- omit in toc -->
-## Attribution
-This guide is based on the **contributing-gen**. [Make your own](https://github.com/bttger/contributing-gen)!
