@@ -9,7 +9,7 @@ THE N.1 OpenSource PayPal Alternative
 
 Contributions are always welcome!
 
-See `contributing.md` for ways to get started. 
+See [contributing.md](https://github.com/Wuemeli/visualpay/blob/main/CONTRIBUTING.md) for ways to get started. 
 
 
 ## Authors
