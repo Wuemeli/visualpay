@@ -1,4 +1,4 @@
-https://github.com/Wuemeli/visualpay/blob/main/CONTRIBUTING.md<!-- omit in toc -->
+<!-- omit in toc -->
 # Contributing to VisualPay
 
 First off, thanks for taking the time to contribute! ❤️
