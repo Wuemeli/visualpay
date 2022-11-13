@@ -15,7 +15,8 @@ require_once "config.php";
 $username = $password = "";
 $username_err = $password_err = $login_err = "";
  
-// Processing form data when form is submitted
+
+/* It's checking if the captcha is valid. */
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 	
 	$data = array(
