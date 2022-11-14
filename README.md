@@ -24,8 +24,13 @@ See [contributing.md](https://github.com/Wuemeli/visualpay/blob/main/CONTRIBUTIN
 
 ## Features
 
-- Coming Soon
-
+- Admin Panel
+- Payout 
+- Deposit
+- Captcha
+- Everything is over an Database
+- GiftCard Shop
+- Transactions Summary
 
 ## Screenshots
 
