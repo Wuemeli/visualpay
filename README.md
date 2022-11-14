@@ -3,7 +3,9 @@
 
 THE N.1 OpenSource PayPal Alternative
 
+## Install
 
+See [Install Guide](https://github.com/Wuemeli/visualpay/wiki/Installation)
 
 ## Contributing
 
