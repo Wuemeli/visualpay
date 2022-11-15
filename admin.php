@@ -12,6 +12,8 @@ require_once "config.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+require 'vendor/autoload.php';
+
 $samples = array();
 $sample = array();
 
