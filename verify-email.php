@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+	/* This is the PHP code that is used to verify the email address. */
 	<?php
 		if($_GET['key'] && $_GET['token']) {
 			include "config.php";
