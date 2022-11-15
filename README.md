@@ -31,7 +31,7 @@ See [contributing.md](https://github.com/Wuemeli/visualpay/blob/main/CONTRIBUTIN
 - Deposit
 - Captcha
 - Everything is over an Database
-- GiftCard Shop
+- GiftCard Shop (In Progress)
 - Transactions Summary
 
 ## Screenshots
