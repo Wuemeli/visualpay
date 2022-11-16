@@ -4,7 +4,8 @@ echo "Installing Dependencies";
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install composer -y
 sudo apt-get install git-all -y
-echo "Downloading Source Code";
+sudo apt-get install php -y
+echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
 cd visualpay
 git@github.com:Wuemeli/visualpay.git
