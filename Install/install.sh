@@ -24,8 +24,8 @@ if [ -f /root/.my.cnf ]; then
 	mysql -e "CREATE USER ${username}@localhost IDENTIFIED BY '${userpass}';"
 	echo "User successfully created!"
 	echo ""
-	echo "Granting ALL privileges on ${dbname} to ${username}!"
-	mysql -e "GRANT ALL PRIVILEGES ON ${dbname}.* TO '${username}'@'localhost';"
+	echo "Granting ALL privileges on visualpay to ${username}!"
+	mysql -e "GRANT ALL PRIVILEGES ON visualpay.* TO '${username}'@'localhost';"
 	mysql -e "FLUSH PRIVILEGES;"
 	echo "Created the Database User and edited the config.php :)"
 	exit
@@ -40,8 +40,8 @@ else
 	mysql -uroot -p${rootpasswd} -e "CREATE USER ${username}@localhost IDENTIFIED BY '${userpass}';"
 	echo "User successfully created!"
 	echo ""
-	echo "Granting ALL privileges on ${dbname} to ${username}!"
-	mysql -uroot -p${rootpasswd} -e "GRANT ALL PRIVILEGES ON ${dbname}.* TO '${username}'@'localhost';"
+	echo "Granting ALL privileges on visualpay to ${username}!"
+	mysql -uroot -p${rootpasswd} -e "GRANT ALL PRIVILEGES ON visualpay.* TO '${username}'@'localhost';"
 	mysql -uroot -p${rootpasswd} -e "FLUSH PRIVILEGES;"
 	echo "Created the Database User and edited the config.php :)"
 	exit
