@@ -35,7 +35,6 @@ echo "Fill now the Database Informations"
 
 //ToDo 
 //Making the Admin Account that the User Created at Line 24. 
-//And auto filling the Informations in the config.php File
 
 #!/bin/bash
 
