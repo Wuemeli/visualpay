@@ -6,6 +6,7 @@ sudo apt install composer -y
 sudo apt-get install git-all -y
 sudo apt-get install php -y
 sudo apt install mysql-server -y
+sudo apt install cat -y
 
 echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
@@ -125,7 +126,7 @@ if($link === false){
 ?>
 EOF
 
-echo "Find Filling Data in an MySQL Database."
+echo "Filling Admin-Data in an MySQL Database."
 
 mysql -u root --execute="source /usr/local/insert.sql; quit;"
 
@@ -133,5 +134,5 @@ echo "Starts the Application with php"
 php -S ${ip}:${port}
 
 echo "Now you can login With the Credentials you made at ${ip}:${port}";
-echo "For more Informations (How to create an other Admin Account? Making GiftCard and co visit https://github.com/visualpay/wiki";
-echo "After Reboot you need to run again" php -S ${ip}:${port} to start the Application. More Informations for Startup see here: https://github.com/wuemeli/visualpay";
+echo "For more Informations (How to create an other Admin Account? Making GiftCard and co visit: https://github.com/visualpay/wiki";
+echo "After Reboot you need to run again php -S ${ip}:${port} to start the Application. More Informations for Startup see here: https://github.com/wuemeli/visualpay";
