@@ -7,23 +7,23 @@ sudo apt-get install git-all -y
 sudo apt-get install php -y
 sudo apt install mysql-server -y
 
-
 echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
 cd visualpay
 //In Progress with Source Code Downloading
 git@github.com:Wuemeli/visualpay.git
 
+echo "Asking the Questions for the Installation"
 
-//Asking the Questions for the Installation
+echo "Fill the IP and Port Informations"
 
-//IP and Port
 echo "Please Enter the IP where the Project should be hosted on?"
 read ip
 echo "Please enter the Port where the Project is pointed to?"
 read port
 
-//Admin Account
+echo "Admin Account Informations"
+
 echo "Whats the Email for the Admin Account?"
 read admail
 echo "Whats the Username for the Admin Account?"
@@ -31,10 +31,12 @@ read aduser
 echo "Whats the Password for the Admin Account? (Note please change the Password after Login because it is not encrypted)"
 read -s adpass
 
-//Database 
+echo "Fill now the Database Informations"
+
 //ToDo 
 //Making the Admin Account that the User Created at Line 24. 
 //And auto filling the Informations in the config.php File
+
 #!/bin/bash
 
 echo "/root/.my.cnf exists dont asking for root Password"
@@ -99,11 +101,11 @@ else
 	exit
 fi
 
-//Imports the MySQL Scheme
+echo "Importing the MySQL Scheme"
 
 mysql -u ${username} -p ${dbname} < Install/visualpay.sql
 
-//Creates the Config.PHP File and insert the Database Values
+echo "Creating the Config.PHP File and insert the Database Values"
 
 cat > config.php << EOF
 <?php
@@ -124,8 +126,9 @@ if($link === false){
 ?>
 EOF
 
-//Starts the Application with php
+echo "Starts the Application with php"
 php -S ${ip}:${port}
 
 echo "Now you can login With the Credentials you made at ${ip}:${port}";
 echo "For more Informations (How to create an other Admin Account? Making GiftCard and co visit https://github.com/visualpay/wiki";
+echo "After Reboot you need to run again" php -S ${ip}:${port} to start the Application. More Informations for Startup see here: https://github.com/wuemeli/visualpay";
