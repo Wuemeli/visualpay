@@ -1,0 +1,10 @@
+{
+    "name": "VisualPay",
+    "type": "php",
+    "request": "launch",
+    "runtimeArgs": [
+        "-S", "localhost:8888", "-t", "."
+    ],
+    "noDebug": true, // <-- disable debugging
+    "profile": true, // <-- enable profiling
+}
