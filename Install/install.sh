@@ -34,7 +34,6 @@ read -s adpass
 //Database 
 //ToDo Auto Importing the Scheme in the Database and making the Admin Account that the User Created at Line 24. 
 //And auto filling the Informations in the config.php File
-
 #!/bin/bash
 
 echo "/root/.my.cnf exists dont asking for root Password"
@@ -99,6 +98,9 @@ else
 	exit
 fi
 
+//Imports the MySQL Scheme
+
+mysql -u ${username} -p ${dbname} < Install/visualpay.sql
 
 //Starts the Application with php
 php -S ${ip}:${port}
