@@ -5,16 +5,52 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install composer -y
 sudo apt-get install git-all -y
 sudo apt-get install php -y
+sudo apt install mysql-server -y
+
+
 echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
 cd visualpay
 //In Progress with Source Code Downloading
 git@github.com:Wuemeli/visualpay.git
 
-//Creating the Database and Importing the Scheme
+
+//Asking the Questions for the Installation
+
+//IP and Port
+echo "Please Enter the IP where the Project should be hosted on?"
+read ip
+echo "Please enter the Port where the Project is pointed to?"
+read port
+
+//Admin Account
+echo "Whats the Email for the Admin Account?"
+read admail
+echo "Whats the Username for the Admin Account?"
+read aduser
+echo "Whats the Password for the Admin Account? (Note please change the Password after Login because it is not encrypted)"
+read -s adpass
+
+//Database 
+//ToDo Auto Importing the Scheme in the Database and making the Admin Account that the User Created at Line 24. 
+//And auto filling the Informations in the config.php File
+
 #!/bin/bash
-# If /root/.my.cnf exists then it won't ask for root password
+
+echo "/root/.my.cnf exists dont asking for root Password"
+
 if [ -f /root/.my.cnf ]; then
+	echo "Please enter the NAME of the new MySQL database! (example: visualpay)"
+	read dbname
+	echo "Please enter the MySQL database CHARACTER SET! (example: latin1, utf8, ...)"
+	echo "Enter utf8 if you don't know what you are doing"
+	read charset
+	echo "Creating new MySQL database..."
+	mysql -e "CREATE DATABASE ${dbname} /*\!40100 DEFAULT CHARACTER SET ${charset} */;"
+	echo "Database successfully created!"
+	echo "Showing existing databases..."
+	mysql -e "show databases;"
+	echo ""
 	echo "Please enter the NAME of the new MySQL database user! (example: user1)"
 	read username
 	echo "Please enter the PASSWORD for the new MySQL database user!"
@@ -24,13 +60,29 @@ if [ -f /root/.my.cnf ]; then
 	mysql -e "CREATE USER ${username}@localhost IDENTIFIED BY '${userpass}';"
 	echo "User successfully created!"
 	echo ""
-	echo "Granting ALL privileges on visualpay to ${username}!"
-	mysql -e "GRANT ALL PRIVILEGES ON visualpay.* TO '${username}'@'localhost';"
+	echo "Granting ALL privileges on ${dbname} to ${username}!"
+	mysql -e "GRANT ALL PRIVILEGES ON ${dbname}.* TO '${username}'@'localhost';"
 	mysql -e "FLUSH PRIVILEGES;"
-	echo "Created the Database User and edited the config.php :)"
+	echo "You're good now :)"
 	exit
-# If /root/.my.cnf doesn't exist then it'll ask for root password	
+	
+echo "/root/.my.cnf doesn't exist asking for root password"
+
 else
+	echo "Please enter root user MySQL password!"
+	echo "Note: password will be hidden when typing"
+	read -s rootpasswd
+	echo "Please enter the NAME of the new MySQL database! (example: visualpay)"
+	read dbname
+	echo "Please enter the MySQL database CHARACTER SET! (example: latin1, utf8, ...)"
+	echo "Enter utf8 if you don't know what you are doing"
+	read charset
+	echo "Creating new MySQL database..."
+	mysql -uroot -p${rootpasswd} -e "CREATE DATABASE ${dbname} /*\!40100 DEFAULT CHARACTER SET ${charset} */;"
+	echo "Database successfully created!"
+	echo "Showing existing databases..."
+	mysql -uroot -p${rootpasswd} -e "show databases;"
+	echo ""
 	echo "Please enter the NAME of the new MySQL database user! (example: user1)"
 	read username
 	echo "Please enter the PASSWORD for the new MySQL database user!"
@@ -40,12 +92,16 @@ else
 	mysql -uroot -p${rootpasswd} -e "CREATE USER ${username}@localhost IDENTIFIED BY '${userpass}';"
 	echo "User successfully created!"
 	echo ""
-	echo "Granting ALL privileges on visualpay to ${username}!"
-	mysql -uroot -p${rootpasswd} -e "GRANT ALL PRIVILEGES ON visualpay.* TO '${username}'@'localhost';"
+	echo "Granting ALL privileges on ${dbname} to ${username}!"
+	mysql -uroot -p${rootpasswd} -e "GRANT ALL PRIVILEGES ON ${dbname}.* TO '${username}'@'localhost';"
 	mysql -uroot -p${rootpasswd} -e "FLUSH PRIVILEGES;"
-	echo "Created the Database User and edited the config.php :)"
+	echo "You're good now :)"
 	exit
 fi
 
-echo "To complete installation of 'VisualPay' edit the Config PHP File with your Database Information";
-echo "Then use the pre-made MySQL Scheme that you find in the install Folder";
+
+//Starts the Application with php
+php -S ${ip}:${port}
+
+echo "Now you can login With the Credentials you made at ${ip}:${port}";
+echo "For more Informations (How to create an other Admin Account? Making GiftCard and co visit https://github.com/visualpay/wiki";
