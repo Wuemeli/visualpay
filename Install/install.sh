@@ -125,6 +125,10 @@ if($link === false){
 ?>
 EOF
 
+echo "Find Filling Data in an MySQL Database."
+
+mysql -u root --execute="source /usr/local/insert.sql; quit;"
+
 echo "Starts the Application with php"
 php -S ${ip}:${port}
 
