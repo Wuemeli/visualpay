@@ -5,7 +5,6 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install composer -y
 sudo apt-get install git-all -y
 sudo apt-get install php -y
-sudo apt install mysql-server -y
 sudo apt install cat -y
 
 echo "Creating an Folder and Downloading Source Code";
