@@ -1,4 +1,3 @@
-//DO NOT USE IT NOW ITS IN PROGRESS
 set -e;
 echo "Installing Dependencies";
 sudo apt update -y && sudo apt upgrade -y
@@ -10,7 +9,6 @@ composer install
 echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
 cd visualpay
-//In Progress with Source Code Downloading
 git@github.com:Wuemeli/visualpay.git
 
 echo "Asking the Questions for the Installation"
@@ -32,9 +30,6 @@ echo "Whats the Password for the Admin Account? (Note please change the Password
 read -s adpass
 
 echo "Fill now the Database Informations"
-
-//ToDo 
-//Making the Admin Account that the User Created at Line 24. 
 
 #!/bin/bash
 
