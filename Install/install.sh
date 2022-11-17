@@ -32,7 +32,8 @@ echo "Whats the Password for the Admin Account? (Note please change the Password
 read -s adpass
 
 //Database 
-//ToDo Auto Importing the Scheme in the Database and making the Admin Account that the User Created at Line 24. 
+//ToDo 
+//Making the Admin Account that the User Created at Line 24. 
 //And auto filling the Informations in the config.php File
 #!/bin/bash
 
