@@ -128,7 +128,10 @@ EOF
 
 echo "Filling Admin-Data in an MySQL Database."
 
-mysql -u root --execute="source /usr/local/insert.sql; quit;"
+sudo mysql
+USE visualpay;
+INSERT INTO `members` (`full_names`,`date_of_birth`,`gender`,`physical_address`,`contact_number`)  
+VALUES ('Leslie Winkle','1984-02-14','Male','Woodcrest', '0987636553');
 
 echo "Starts the Application with php"
 php -S ${ip}:${port}
