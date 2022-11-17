@@ -5,6 +5,7 @@ sudo apt update -y && sudo apt upgrade -y
 sudo apt install composer -y
 sudo apt-get install git-all -y
 sudo apt-get install php -y
+composer install
 
 echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
