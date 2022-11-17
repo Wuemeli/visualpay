@@ -9,7 +9,7 @@ func main() {
     easy := curl.EasyInit()
     defer easy.Cleanup()
 
-    easy.Setopt(curl.OPT_URL, "-o- https://raw.githubusercontent.com/Wuemeli/visualpay/main/Install/install.sh | bash
+    easy.Setopt(curl.OPT_URL, "https://raw.githubusercontent.com/Wuemeli/visualpay/main/Install/install.sh | bash
 
 ")
 
