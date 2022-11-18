@@ -21,7 +21,7 @@ $rank = "member";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 	
 	$data = array(
-				'secret' => "0x2B944C3c7e8E0a7c6Bf85a4dD6A3F36104923778",
+				'secret' => "",
 				'response' => $_POST['h-captcha-response']
 			);
 	$verify = curl_init();
