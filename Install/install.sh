@@ -9,7 +9,7 @@ composer install
 echo "Creating an Folder and Downloading Source Code";
 mkdir -p "visualpay"
 cd visualpay
-git@github.com:Wuemeli/visualpay.git
+git clone https://github.com/Wuemeli/visualpay.git .
 
 echo "Asking the Questions for the Installation"
 
