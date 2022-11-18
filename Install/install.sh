@@ -122,9 +122,7 @@ EOF
 
 echo "Filling Admin-Data in an MySQL Database. (Currently this dont Works)"
 
-sudo mysql
-USE ${dbname};
-INSERT INTO `user` (`id`,`username`,`password`,`email`,`rang`,`balance`,`status`,`email_verification_link`,`email_verified_at`,`verified`)  VALUES ('1','${dbname}','Male','Woodcrest', '0987636553');
+$sql = "INSERT INTO user (id, username, password, email, rang, balance, status, email_verification_link, email_verified_at, verified) VALUES ('1', '$aduser', '$adpass', '$admail', '1', '0', '1', '0', '0', '1')";
 
 echo "Starts the Application with php"
 php -S ${ip}:${port}
@@ -132,3 +130,4 @@ php -S ${ip}:${port}
 echo "Now you can login With the Credentials you made at ${ip}:${port}";
 echo "For more Informations (How to create an other Admin Account? Making GiftCard and co visit: https://github.com/visualpay/wiki";
 echo "After Server-Reboot you need to run again php -S ${ip}:${port} to start the Application. More Informations for Startup see here: https://github.com/wuemeli/visualpay";
+echo "If you want to start the Application in Background use: nohup php -S ${ip}:${port} &";
