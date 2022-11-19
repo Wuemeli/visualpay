@@ -756,6 +756,7 @@ body.dark .home .text{
 										echo "You can't afford it!";
 									} else if($response == 2) {
 										echo "Thanks for the order. Your Giftcard will be sent to your email.";
+                                        $sql = "UPDATE users SET balance = balance - $price WHERE id = $id";
                                         $mail = new PHPMailer(true);
                                         $mail->isSMTP();
                                         $mail->Host = 'smtp.gmail.com';
@@ -773,7 +774,7 @@ body.dark .home .text{
 ');
                                         $mail->addAddress($email);
                                         $mail->isHTML(true);
-                                        $mail->Subject = 'Your Giftcard';
+                                        $mail->Subject = 'Your Giftcard Code is Ready';
                                         $mail->Body = 'Your Giftcard Code is: '.$code;
                                         $mail->send();
                                     } else if($response == 3) {
