@@ -129,5 +129,5 @@ php -S ${ip}:${port}
 
 echo "Now you can login With the Credentials you made at ${ip}:${port}";
 echo "For more Informations (How to create an other Admin Account? Making GiftCard and co visit: https://github.com/visualpay/wiki";
-echo "After Server-Reboot you need to run again php -S ${ip}:${port} to start the Application. More Informations for Startup see here: https://github.com/wuemeli/visualpay";
+echo "After Server-Reboot you need to run again php -S ${ip}:${port} to start the Application. More Informations for Startup see here: https://github.com/wuemeli/visualpay/wiki";
 echo "If you want to start the Application in Background use: nohup php -S ${ip}:${port} &";
